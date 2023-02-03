@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Price from './helpers/price/Price';
+import './Prices.scss';
 
 export default class Prices extends Component {
   prices = [
@@ -73,7 +74,7 @@ export default class Prices extends Component {
     return (
       <section className='wrap-prices-section'>
         <div className='container'>
-          <div className='d-flex justify-content-between'>
+          <div className='wrap-prices'>
             {this.prices.map((price) => {
               return <Price title={price.title} price={price.price} protections={price.protections} />;
             })}

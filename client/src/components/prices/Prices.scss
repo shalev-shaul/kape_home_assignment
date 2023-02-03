@@ -1,3 +1,16 @@
+@use '/src/utils/variables' as vars;
+
 .wrap-prices-section {
-  margin-bottom: 80px;
+  @media (max-width: vars.$breakpoint-tablet) {
+    top: -175px;
+    position: relative;
+  }
+  .wrap-prices {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: vars.$breakpoint-tablet) {
+      flex-direction: column-reverse;
+    }
+  }
 }

@@ -1,0 +1,31 @@
+@use '/src/utils/variables' as vars;
+
+.wrap-footer-section {
+  background-image: url('../../assets/images/footer-background.png');
+
+  @media (max-width: vars.$breakpoint-tablet) {
+    background-image: url('../../assets/images/footer-mobile-bg.png');
+    background-size: cover;
+  }
+
+  .container {
+    padding: 80px 0px 60px 0px;
+    @media (max-width: vars.$breakpoint-tablet) {
+      padding: 80px 0px;
+    }
+
+    .wrap-footer {
+      display: flex;
+
+      @media (max-width: vars.$breakpoint-tablet) {
+        justify-content: center;
+      }
+
+      img {
+        @media (max-width: vars.$breakpoint-tablet) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

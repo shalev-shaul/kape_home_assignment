@@ -6,9 +6,9 @@ import starsList from '../../assets/images/stars-list.png';
 export default class Header extends Component {
   render() {
     return (
-      <section className='wrap-header'>
+      <header className='wrap-header-section'>
         <div className='container'>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='wrap-header-content'>
             <div>
               <img src={logo} alt='React Logo' />
             </div>
@@ -26,7 +26,7 @@ export default class Header extends Component {
             </div>
           </div>
         </div>
-      </section>
+      </header>
     );
   }
 }

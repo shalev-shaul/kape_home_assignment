@@ -8,6 +8,10 @@
   position: relative;
   padding-top: 140px;
   font-family: vars.$main-font-family;
+  @media (max-width: vars.$breakpoint-tablet) {
+    background-position: -985px;
+    background-size: cover;
+  }
 
   .content {
     position: absolute;
@@ -33,11 +37,20 @@
         margin-top: 0px;
       }
       .brand-title {
-        font-size: vars.$xxl-font-size;
+        font-size: vars.$xxxl-font-size;
+        padding: 0px 25px;
+
+        @media (max-width: vars.$breakpoint-tablet) {
+          font-size: vars.$lg-font-size;
+          margin-bottom: 15px;
+        }
       }
       .brand-subtitle {
         font-size: vars.$xl-font-size;
         font-weight: 500;
+        @media (max-width: vars.$breakpoint-tablet) {
+          font-size: vars.$sm-font-size;
+        }
       }
     }
   }

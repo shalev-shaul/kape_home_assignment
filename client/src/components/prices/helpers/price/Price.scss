@@ -11,6 +11,11 @@
   top: -200px;
   padding: 20px;
 
+  @media (max-width: vars.$breakpoint-tablet) {
+    width: 80%;
+    margin: 0px auto 70px auto;
+  }
+
   .wrap-image {
     display: flex;
     justify-content: center;

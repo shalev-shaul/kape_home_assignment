@@ -1,0 +1,119 @@
+@use '../../utils/variables' as vars;
+
+.wrap-features-section {
+  margin-bottom: 140px;
+  @media (max-width: vars.$breakpoint-tablet) {
+    position: relative;
+    top: -330px;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .wrap-features {
+    background: rgba(232, 239, 252, 0.65);
+    backdrop-filter: blur(6.5px);
+    border-radius: 24px;
+    padding: 40px;
+    @media (max-width: vars.$breakpoint-tablet) {
+      width: 80%;
+      padding: 40px 20px 10px 20px;
+      margin: 0px auto !important;
+    }
+
+    .warp-feature:nth-child(1) {
+      flex-direction: row;
+
+      @media (max-width: vars.$breakpoint-tablet) {
+        flex-direction: column-reverse;
+
+        .wrap-content-info {
+          .title {
+            margin-bottom: 30px;
+          }
+          .content {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .wrap-content {
+        flex-direction: column;
+        align-items: end;
+      }
+    }
+    .warp-feature:nth-child(2) {
+      flex-direction: row-reverse;
+
+      @media (max-width: vars.$breakpoint-tablet) {
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+
+        .wrap-content-info {
+          .title {
+            margin-bottom: 30px;
+          }
+          .content {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .wrap-content {
+        flex-direction: column;
+      }
+    }
+
+    .warp-feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: vars.$breakpoint-tablet) {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+
+      .wrap-image,
+      .wrap-content {
+        margin: 0px 50px;
+        display: flex;
+        justify-content: end;
+        @media (max-width: vars.$breakpoint-tablet) {
+          margin: 0px 5px;
+        }
+      }
+
+      .wrap-image {
+        img {
+          @media (max-width: vars.$breakpoint-tablet) {
+            width: 100%;
+          }
+        }
+      }
+
+      .wrap-content-info {
+        width: 65%;
+        @media (max-width: vars.$breakpoint-tablet) {
+          width: 100%;
+        }
+
+        .title {
+          display: block;
+          font-weight: 700;
+          font-size: vars.$lg-font-size;
+          margin-bottom: 10px;
+          // width: 65%;
+          @media (max-width: vars.$breakpoint-tablet) {
+            text-align: center;
+            font-size: 24px;
+          }
+        }
+        .content {
+          display: block;
+          // width: 65%;
+          font-size: 17px;
+          @media (max-width: vars.$breakpoint-tablet) {
+            text-align: center;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
