@@ -1,26 +1,26 @@
 import './App.scss';
 import Header from '../header/Header';
 import React from 'react';
-import Brand from '../brand/Brand';
-import Prices from '../prices/Prices';
 import AvReport from '../av_report/AvReport';
-import ExpertsTalking from '../experts_talking/ExpertsTalking';
-import Features from '../features/Features';
 import Faq from '../faq/Faq';
 import Footer from '../footer/Footer';
+import Products from '../products/Products';
+import Introduction from '../introduction/Introduction';
+import ExpertRecommendations from '../expert_recommendations/ExpertRecommendations';
+import FeaturesInfo from '../features_info/FeaturesInfo';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Header />
-      <Brand />
-      <Prices />
+      <Introduction />
+      <Products />
       <AvReport />
-      <ExpertsTalking />
-      <Features />
+      <ExpertRecommendations />
+      <FeaturesInfo />
       <Faq />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 

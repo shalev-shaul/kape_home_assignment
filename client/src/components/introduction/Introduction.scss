@@ -1,7 +1,7 @@
 @use '/src/utils/variables' as vars;
 
-.wrap-brand-section {
-  background-image: url('../../assets/images/brand.png');
+.wrap-introduction-section {
+  background-image: url('../../assets/images/introduction.png');
   background-repeat: no-repeat;
   height: 600px;
   background-size: 100% 100%;
@@ -36,7 +36,7 @@
         margin-bottom: 5px;
         margin-top: 0px;
       }
-      .brand-title {
+      .introduction-title {
         font-size: vars.$xxxl-font-size;
         padding: 0px 25px;
 
@@ -45,7 +45,7 @@
           margin-bottom: 15px;
         }
       }
-      .brand-subtitle {
+      .introduction-subtitle {
         font-size: vars.$xl-font-size;
         font-weight: 500;
         @media (max-width: vars.$breakpoint-tablet) {

@@ -1,10 +1,10 @@
 import React from 'react';
-import './Price.scss';
+import './ProductItem.scss';
 import antivirus from '../../../../assets/images/antivirus.png';
 import dollarIcon from '../../../../assets/images/dollar-icon.png';
 import checkIcon from '../../../../assets/images/check-icon.png';
 
-export default function Price(props) {
+export default function ProductItem(props) {
   return (
     <div className='wrap-price'>
       <div className='wrap-image'>
@@ -39,9 +39,9 @@ export default function Price(props) {
       <div className='wrap-protection'>
         <span className='protection-title'>{props.title} includes:</span>
 
-        {props.protections.map((protection) => {
+        {props.protections.map((protection, i) => {
           return (
-            <div className='protection-row'>
+            <div key={'protection-' + i} className='protection-row'>
               <img className='mr-1' src={checkIcon} alt='Check Icon' />
               <span className='protection-content'>{protection}</span>
             </div>
