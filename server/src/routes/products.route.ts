@@ -1,6 +1,6 @@
-import { getProducts, getPriceByBundle } from './../controllers/products.controller';
+import { getPriceByBundle } from './../controllers/products.controller';
 import { Router } from 'express';
 export const router = Router();
 
-router.get('/', getProducts);
+//router.get('/test', testa);
 router.get('/getPriceByBundle', getPriceByBundle);

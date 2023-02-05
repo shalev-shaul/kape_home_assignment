@@ -1,11 +1,11 @@
 @use '../../utils/variables' as vars;
 
 .experts-recommendations-section {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   @media (max-width: vars.$breakpoint-tablet) {
-    position: relative;
-    top: -390px;
-    margin-bottom: 0px;
+    // position: relative;
+    // top: -390px;
+    margin-bottom: 70px;
   }
   .wrap-experts-recommendations {
     display: flex;

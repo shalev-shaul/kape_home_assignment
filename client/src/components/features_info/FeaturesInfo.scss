@@ -3,10 +3,10 @@
 .wrap-features-section {
   margin-bottom: 140px;
   @media (max-width: vars.$breakpoint-tablet) {
-    position: relative;
-    top: -330px;
+    // position: relative;
+    // top: -330px;
     width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: 90px;
   }
   .wrap-features {
     background: rgba(232, 239, 252, 0.65);

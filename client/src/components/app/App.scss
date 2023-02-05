@@ -1,3 +1,5 @@
+@use '../../utils/variables' as vars;
+
 .App {
   text-align: center;
 }
@@ -34,5 +36,19 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.wrap-body-components {
+  position: relative;
+  top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+@media (max-width: vars.$breakpoint-tablet) {
+  .wrap-body-components {
+    top: -370px;
   }
 }

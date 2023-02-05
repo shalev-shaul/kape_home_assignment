@@ -14,12 +14,14 @@ function App() {
     <>
       <Header />
       <Introduction />
-      <Products />
-      <AvReport />
-      <ExpertRecommendations />
-      <FeaturesInfo />
-      <Faq />
-      <Footer />
+      <div className='wrap-body-components'>
+        <Products />
+        <AvReport />
+        <ExpertRecommendations />
+        <FeaturesInfo />
+        <Faq />
+        <Footer />
+      </div>
     </>
   );
 }

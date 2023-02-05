@@ -3,5 +3,10 @@ export interface Product {
   originalPrice: number;
   discountPrice: number;
   monthlyPrice: number;
+  pricesFormat: {
+    originalPrice: string;
+    discountPrice: string;
+    monthlyPrice: string;
+  };
   discountPercentage: number;
 }
