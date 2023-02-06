@@ -8,7 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     try {
-      HttpService.get(httpUrl + '/products/getPriceByBundle/?bundle=*&currency=EUR', true).then(({ data }) => {
+      HttpService.get(httpUrl + '/products/getPriceByBundle/?bundle=*&currency=USD', true).then(({ data }) => {
         setProducts(data);
       });
     } catch (err) {
