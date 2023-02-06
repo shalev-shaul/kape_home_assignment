@@ -21,21 +21,19 @@ const FeaturesInfo = () => {
   return (
     <section className='wrap-features-section'>
       <div className='container wrap-features'>
-        {features.map((feature, i) => {
-          return (
-            <div key={`feature-${i}`} className='warp-feature'>
-              <div className='wrap-image'>
-                <img src={feature.imgSrc} alt='' />
-              </div>
-              <div className='wrap-content'>
-                <div className='wrap-content-info'>
-                  <span className='title'>{feature.title}</span>
-                  <span className='content'>{feature.content}</span>
-                </div>
+        {features.map((feature, i) => (
+          <div key={`feature-${i}`} className='warp-feature'>
+            <div className='wrap-image'>
+              <img src={feature.imgSrc} alt='' />
+            </div>
+            <div className='wrap-content'>
+              <div className='wrap-content-info'>
+                <span className='title'>{feature.title}</span>
+                <span className='content'>{feature.content}</span>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

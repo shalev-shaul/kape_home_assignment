@@ -20,15 +20,13 @@ const Products = () => {
     <section className='wrap-prices-section'>
       <div className='container'>
         <div className='wrap-prices'>
-          {products?.map((product, i) => {
-            return (
-              <ProductItem
-                key={`${product.bundleName}-${i}`}
-                bundleName={product.bundleName}
-                productPricingInfo={product}
-              />
-            );
-          })}
+          {products?.map((product, i) => (
+            <ProductItem
+              key={`${product.bundleName}-${i}`}
+              bundleName={product.bundleName}
+              productPricingInfo={product}
+            />
+          ))}
         </div>
       </div>
     </section>

@@ -26,14 +26,12 @@ const ExpertRecommendations = () => {
         <div className='wrap-experts-recommendations '>
           <div className='wrap-experts-content'>
             <h1 className='experts-title'>What the experts are saying about Intego</h1>
-            {recommendations.map((recommendation, i) => {
-              return (
-                <div key={`recommendation- + ${i}`} className='wrap-expert-comment'>
-                  <img src={recommendation.imgSrc} alt='' />
-                  <span className='expert-comment'>{recommendation.text}</span>
-                </div>
-              );
-            })}
+            {recommendations.map((recommendation, i) => (
+              <div key={`recommendation- + ${i}`} className='wrap-expert-comment'>
+                <img src={recommendation.imgSrc} alt='' />
+                <span className='expert-comment'>{recommendation.text}</span>
+              </div>
+            ))}
           </div>
           <div className='wrap-experts-image'>
             <img src={experts} alt='' />

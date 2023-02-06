@@ -47,16 +47,14 @@ const Faq = () => {
 
           <div className='wrap-faq-items'>
             <div className='warp-faq'>
-              {faqs.map((faq, i) => {
-                return (
-                  <details key={`faq-${i}`} open={i === 0}>
-                    <summary>{faq.question}</summary>
-                    <div className='content'>
-                      <p>{faq.answer}</p>
-                    </div>
-                  </details>
-                );
-              })}
+              {faqs.map((faq, i) => (
+                <details key={`faq-${i}`} open={i === 0}>
+                  <summary>{faq.question}</summary>
+                  <div className='content'>
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>

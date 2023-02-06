@@ -26,9 +26,9 @@ const AvReport = () => {
           <div className='awards'>
             <h5 className='award'>Awards</h5>
             <div className='awards-images'>
-              {awardsImages.map((imgSrc, i) => {
-                return <img key={`av-image-${i}`} src={imgSrc} alt='' />;
-              })}
+              {awardsImages.map((imgSrc, i) => (
+                <img key={`av-image-${i}`} src={imgSrc} alt='' />
+              ))}
             </div>
           </div>
 

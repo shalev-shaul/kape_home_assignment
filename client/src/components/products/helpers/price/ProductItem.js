@@ -181,14 +181,12 @@ const ProductItem = (props) => {
       <div className='wrap-protection'>
         <span className='protection-title'>{bundleTitles[props.bundleName]} includes:</span>
 
-        {bundlesProtections[props.bundleName]?.map((protection, i) => {
-          return (
-            <div key={`protection-${i}`} className={'protection-row ' + (protection.isMarked ? 'is-mark' : '')}>
-              <img className='check-img' src={checkIcon} alt='Check Icon' />
-              <span className='protection-content'>{protection.content}</span>
-            </div>
-          );
-        })}
+        {bundlesProtections[props.bundleName]?.map((protection, i) => (
+          <div key={`protection-${i}`} className={'protection-row ' + (protection.isMarked ? 'is-mark' : '')}>
+            <img className='check-img' src={checkIcon} alt='Check Icon' />
+            <span className='protection-content'>{protection.content}</span>
+          </div>
+        ))}
       </div>
 
       <span className='first-payment'>Discount applicable for the first payment only</span>
