@@ -8,7 +8,7 @@ import windows from '../../assets/images/windows.png';
 import topRightBackground from '../../assets/images/top-right-background.png';
 import bottomLeftBackground from '../../assets/images/bottom-left-background.png';
 
-export default function AvReport() {
+const AvReport = () => {
   let awardsImages = [windows, top2016_2, top2016, excellent, virus100];
   return (
     <section className='wrap-av-report-section'>
@@ -27,7 +27,7 @@ export default function AvReport() {
             <h5 className='award'>Awards</h5>
             <div className='awards-images'>
               {awardsImages.map((imgSrc, i) => {
-                return <img key={'av-image' + i} src={imgSrc} alt='' />;
+                return <img key={`av-image-${i}`} src={imgSrc} alt='' />;
               })}
             </div>
           </div>
@@ -50,4 +50,6 @@ export default function AvReport() {
       </div>
     </section>
   );
-}
+};
+
+export default AvReport;

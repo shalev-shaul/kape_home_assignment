@@ -5,7 +5,7 @@ import softonic from '../../assets/images/softonic.png';
 import safetyDetectives from '../../assets/images/safety-detectives.png';
 import experts from '../../assets/images/experts.png';
 
-export default function ExpertRecommendations() {
+const ExpertRecommendations = () => {
   let recommendations = [
     {
       imgSrc: windowsReport,
@@ -28,7 +28,7 @@ export default function ExpertRecommendations() {
             <h1 className='experts-title'>What the experts are saying about Intego</h1>
             {recommendations.map((recommendation, i) => {
               return (
-                <div key={'recommendation-' + i} className='wrap-expert-comment'>
+                <div key={`recommendation- + ${i}`} className='wrap-expert-comment'>
                   <img src={recommendation.imgSrc} alt='' />
                   <span className='expert-comment'>{recommendation.text}</span>
                 </div>
@@ -42,4 +42,6 @@ export default function ExpertRecommendations() {
       </div>
     </section>
   );
-}
+};
+
+export default ExpertRecommendations;

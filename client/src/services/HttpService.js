@@ -1,6 +1,11 @@
 import axios from 'axios';
+import { jwt_key } from '../utils/consts';
+import LocalStorageService from './LocalStorageService';
 
 class HttpService {
+  defaultHeaders = {
+    'Content-Type': 'application/json',
+  };
   constructor() {
     const instance = axios.create();
     instance.interceptors.response.use(this.handleSuccess, this.handleError);
@@ -15,12 +20,16 @@ class HttpService {
     return Promise.reject(error);
   }
 
-  get(url) {
-    return this.instance.get(url);
+  get(url, authenticated = false) {
+    let headers = this.defaultHeaders;
+    if (authenticated) headers = { ...headers, authorization: `${LocalStorageService.get(jwt_key)}` };
+    return this.instance.get(url, { headers });
   }
 
-  post(url, data) {
-    return this.instance.post(url, data);
+  post(url, data, authenticated = false) {
+    let headers = this.defaultHeaders;
+    if (authenticated) headers = { ...headers, authorization: `${LocalStorageService.get(jwt_key)}` };
+    return this.instance.post(url, data, { headers });
   }
 
   put(url, data) {

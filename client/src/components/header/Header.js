@@ -4,7 +4,7 @@ import logo from '../../assets/images/intego_logo.png';
 import starIcon from '../../assets/images/star-icon.png';
 import starsList from '../../assets/images/stars-list.png';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className='wrap-header-section'>
       <div className='container'>
@@ -28,4 +28,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

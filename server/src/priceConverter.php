@@ -26,6 +26,9 @@ class PriceConverter
 
   function convertPrice($amount, $currency)
   {
+    $symbolFormat = new NumberFormatter($locale . "@currency=$currency", NumberFormatter::CURRENCY);
+    $symbol = $symbolFormat->getSymbol(NumberFormatter::CURRENCY_SYMBOL);
+
     if (in_array($currency, $this->supportedCurrencies)) {
       $curl = curl_init();
       curl_setopt(
@@ -46,12 +49,10 @@ class PriceConverter
       curl_close($curl);
 
       $amountConverted = $this->roundPrice((float) $response->result);
-      $formatter = new NumberFormatter('en', NumberFormatter::CURRENCY);
-      return $formatter->formatCurrency($amountConverted, $currency);
+      return ['symbol' => $symbol, 'amount' => $amountConverted];
     } else {
       $amount = $this->roundPrice((float) $amount);
-      $formatter = new NumberFormatter('en', NumberFormatter::CURRENCY);
-      return $formatter->formatCurrency($amount, $this->defaultCurrency);
+      return ['symbol' => $symbol, 'amount' => $amount];
     }
   }
 
@@ -69,5 +70,5 @@ class PriceConverter
 $priceConvertClass = new PriceConverter();
 $amount = $argv[1];
 $currency = $argv[2];
-echo $priceConvertClass->convertPrice($amount, $currency);
+echo json_encode($priceConvertClass->convertPrice($amount, $currency));
 ?>

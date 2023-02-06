@@ -4,12 +4,16 @@ import { httpUrl } from '../../utils/consts';
 import ProductItem from './helpers/price/ProductItem';
 import './Products.scss';
 
-export default function Products() {
+const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    HttpService.get(httpUrl + '/products/getPriceByBundle/?bundle=*&currency=usd').then((response) => {
-      setProducts(response.data);
-    });
+    try {
+      HttpService.get(httpUrl + '/products/getPriceByBundle/?bundle=*&currency=EUR', true).then(({ data }) => {
+        setProducts(data);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }, []);
 
   return (
@@ -19,7 +23,7 @@ export default function Products() {
           {products?.map((product, i) => {
             return (
               <ProductItem
-                key={product.bundleName + '-' + i}
+                key={`${product.bundleName}-${i}`}
                 bundleName={product.bundleName}
                 productPricingInfo={product}
               />
@@ -29,4 +33,6 @@ export default function Products() {
       </div>
     </section>
   );
-}
+};
+
+export default Products;

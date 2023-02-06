@@ -3,7 +3,7 @@ import './FeaturesInfo.scss';
 import featureSafety from '../../assets/images/feature-safety.png';
 import featureProtection from '../../assets/images/features-protection.png';
 
-export default function FeaturesInfo() {
+const FeaturesInfo = () => {
   let features = [
     {
       imgSrc: featureProtection,
@@ -23,7 +23,7 @@ export default function FeaturesInfo() {
       <div className='container wrap-features'>
         {features.map((feature, i) => {
           return (
-            <div key={'feature-' + i} className='warp-feature'>
+            <div key={`feature-${i}`} className='warp-feature'>
               <div className='wrap-image'>
                 <img src={feature.imgSrc} alt='' />
               </div>
@@ -39,4 +39,5 @@ export default function FeaturesInfo() {
       </div>
     </section>
   );
-}
+};
+export default FeaturesInfo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Introduction.scss';
 
-export default function Introduction() {
+const Introduction = () => {
   return (
     <section className='wrap-introduction-section'>
       <div className='content'>
@@ -12,4 +12,5 @@ export default function Introduction() {
       </div>
     </section>
   );
-}
+};
+export default Introduction;

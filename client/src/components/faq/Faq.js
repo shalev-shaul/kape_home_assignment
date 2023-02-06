@@ -1,7 +1,7 @@
 import React from 'react';
 import './Faq.scss';
 
-export default function Faq() {
+const Faq = () => {
   let faqs = [
     {
       question: 'What are the system requirements for Intego antivirus?',
@@ -49,7 +49,7 @@ export default function Faq() {
             <div className='warp-faq'>
               {faqs.map((faq, i) => {
                 return (
-                  <details key={'faq-' + i} open={i === 0}>
+                  <details key={`faq-${i}`} open={i === 0}>
                     <summary>{faq.question}</summary>
                     <div className='content'>
                       <p>{faq.answer}</p>
@@ -63,4 +63,6 @@ export default function Faq() {
       </div>
     </section>
   );
-}
+};
+
+export default Faq;
