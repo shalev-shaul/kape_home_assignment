@@ -24,6 +24,12 @@ code {
   margin: 0px auto;
 }
 
+@media (max-width: 1300px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
 .d-flex {
   display: flex;
 }
